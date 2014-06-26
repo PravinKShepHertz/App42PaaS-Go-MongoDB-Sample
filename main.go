@@ -20,7 +20,7 @@ type User struct {
 }
 
 func setupDB() *mgo.Session{
-	db, err := mgo.Dial("localhost")
+	db, err := mgo.Dial("ax5hfoocpn9zy9a5:all5mrme813j6rmt1mtekvegfium2h5v@192.168.3.241:46151")
 	PanicIf(err)
 	return db
 }
