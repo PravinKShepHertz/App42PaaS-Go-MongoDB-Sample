@@ -59,7 +59,7 @@ func saveHandler (w http.ResponseWriter, r *http.Request) {
 	email := r.FormValue("email")
 	description := r.FormValue("description")
 
-	coll := db.DB("Go-Mongo").C("user")
+	coll := db.DB("demo_db").C("user")
 	fmt.Println("Collection: ", coll)
 
 	err := coll.Insert(&User{name, email, description})
