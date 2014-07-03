@@ -20,7 +20,7 @@ type User struct {
 }
 
 func setupDB() *mgo.Session{
-	db, err := mgo.Dial("ax5hfoocpn9zy9a5:all5mrme813j6rmt1mtekvegfium2h5v@192.168.3.241:46151")
+	db, err := mgo.Dial("ax1j4z8drbya3zg2:agcne68j8xrzot71oyq37nji8dbv3973@192.168.3.241:4841")
 	PanicIf(err)
 	return db
 }
@@ -33,7 +33,7 @@ func PanicIf(err error) {
 
 func indexHandler(w http.ResponseWriter, r *http.Request ) {
 	fmt.Println("In indexHandler")
-	coll := db.DB("Go-Mongo").C("user")
+	coll := db.DB("demo_db").C("user")
 	fmt.Println("Collection: ", coll)
 
 	users := []User{}
